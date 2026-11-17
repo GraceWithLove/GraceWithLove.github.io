@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Faith-inspired artwork created to share hope, beauty, and the love of God.">
+    <title>Your Name | Faith-Inspired Art</title>
+
+    <style>
+        /* =========================================================
+           EDITABLE DESIGN SETTINGS
+           Change these color values to adjust the whole website.
+        ========================================================= */
+        :root {
+            --cream: #F7F3EA;
+            --paper: #FFFCF6;
+            --evergreen: #263D35;
+            --evergreen-dark: #1D302A;
+            --sage: #788A7B;
+            --gold: #B18A55;
+            --ink: #303632;
+            --muted: #68716B;
+            --line: #DED7C9;
+            --white: #FFFFFF;
+            --shadow: 0 14px 36px rgba(35, 48, 41, 0.09);
+        }
+
+        /* =========================================================
+           BASE STYLES
+        ========================================================= */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 24px;
+        }
+
+        body {
+            background: var(--cream);
+            color: var(--ink);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        img,
+        video {
+            max-width: 100%;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button,
+        input,
+        textarea {
+            font: inherit;
+        }
+
+        button,
+        a,
+        input,
+        textarea {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        :focus-visible {
+            outline: 3px solid var(--gold);
+            outline-offset: 3px;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -60px;
+            left: 16px;
+            z-index: 2000;
+            padding: 10px 15px;
+            background: var(--evergreen);
+            color: var(--white);
+        }
+
+        .skip-link:focus {
+            top: 12px;
+        }
+
+        .serif,
+        h1,
+        h2,
+        h3 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-weight: normal;
+        }
+
+        .eyebrow {
+            color: var(--gold);
+            font-size: 0.76rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            line-height: 1.4;
+            text-transform: uppercase;
+        }
+
+        .section-heading {
+            color: var(--evergreen);
+            font-size: clamp(2rem, 4vw, 3rem);
+            line-height: 1.15;
+        }
+
+        .section-intro {
+            max-width: 660px;
+            margin: 12px auto 0;
+            color: var(--muted);
+            font-size: 1rem;
+        }
+
+        /* =========================================================
+           HEADER AND NAVIGATION
+           EDIT: Replace the studio name and navigation labels here.
+        ========================================================= */
+        .site-header {
+            background: var(--paper);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .header-inner {
+            width: min(1160px, 92%);
+            min-height: 88px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 28px;
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--evergreen);
+        }
+
+        .brand-mark {
+            width: 42px;
+            height: 42px;
+            display: grid;
+            place-items: center;
+            border: 1px solid var(--gold);
+            border-radius: 50%;
+            color: var(--gold);
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.55rem;
+            line-height: 1;
+        }
+
+        .brand-name {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.3rem;
+            letter-spacing: 0.02em;
+        }
+
+        .main-nav {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 26px;
+            color: var(--evergreen);
+            font-size: 0.87rem;
+            font-weight: 700;
+        }
+
+        .main-nav a {
+            padding: 8px 0;
+            border-bottom: 2px solid transparent;
+            transition: border-color 180ms ease, color 180ms ease;
+        }
+
+        .main-nav a:hover {
+            color: var(--gold);
+            border-bottom-color: var(--gold);
+        }
+
+        /* =========================================================
+           HOME INTRODUCTION
+           Mission and About Me are deliberately side by side.
+           EDIT: Change the two headings and paragraphs below.
+        ========================================================= */
+        .home-intro {
+            /* =====================================================
+               EDITABLE AREA: HOME PAGE BACKGROUND IMAGE
+               Upload your chosen image to the images folder and
+               change the filename in url(...) below.
+
+               Example: images/home-background.jpg
+               Keep the soft overlay so the text remains readable.
+            ===================================================== */
+            width: 100%;
+            margin: 0;
+            padding: 66px 4% 60px;
+            background-color: var(--cream);
+            background-image:
+                linear-gradient(
+                    rgba(247, 243, 234, 0.86),
+                    rgba(247, 243, 234, 0.86)
+                ),
+                url("images/home-background.jpg");
+            background-repeat: no-repeat;
+            background-position: top left;
+            background-size: cover;
+        }
+
+        .home-intro-heading {
+            max-width: 760px;
+            margin: 0 auto 32px;
+            text-align: center;
+        }
+
+        .home-intro-heading h1 {
+            margin-top: 12px;
+            color: var(--evergreen);
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            line-height: 1.04;
+        }
+
+        .home-intro-heading p {
+            max-width: 650px;
+            margin: 16px auto 0;
+            color: var(--muted);
+            font-size: 1.05rem;
+        }
+
+        .intro-panels {
+            width: min(1160px, 100%);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 24px;
+        }
+
+        .intro-panel {
+            min-height: 190px;
+            padding: 27px 30px;
+            background: var(--paper);
+            border: 1px solid var(--line);
+            border-top: 3px solid var(--gold);
+            box-shadow: var(--shadow);
+        }
+
+        .intro-panel h2 {
+            margin-bottom: 10px;
+            color: var(--evergreen);
+            font-size: 1.65rem;
+            line-height: 1.2;
+        }
+
+        .intro-panel p {
+            color: var(--muted);
+            font-size: 0.98rem;
+            line-height: 1.7;
+        }
+
+        /* =========================================================
+           GALLERY
+           Desktop: two columns and three rows (six works total).
+           The first card is the video; five image cards follow.
+           EDIT: Replace video/image paths, titles, dates, and text.
+        ========================================================= */
+        .gallery-section {
+            padding: 76px 4% 86px;
+            background: var(--paper);
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .gallery-header {
+            width: min(1160px, 100%);
+            margin: 0 auto 38px;
+            text-align: center;
+        }
+
+        .gallery-grid {
+            width: min(1160px, 100%);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 38px 30px;
+        }
+
+        .gallery-card {
+            min-width: 0;
+        }
+
+        .gallery-media {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            overflow: hidden;
+            background: #E2DED4;
+            border: 1px solid var(--line);
+            box-shadow: 0 8px 22px rgba(35, 48, 41, 0.07);
+        }
+
+        .gallery-media img,
+        .gallery-media video {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .gallery-media video {
+            background: #192922;
+            object-fit: contain;
+        }
+
+        .image-open {
+            display: block;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            border: 0;
+            background: transparent;
+            cursor: zoom-in;
+        }
+
+        .image-open img {
+            transition: transform 300ms ease;
+        }
+
+        .image-open:hover img {
+            transform: scale(1.035);
+        }
+
+        .gallery-card h3 {
+            margin-top: 13px;
+            color: var(--evergreen);
+            font-size: 1.45rem;
+            line-height: 1.25;
+        }
+
+        .gallery-date {
+            margin-top: 4px;
+            color: var(--gold);
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+        }
+
+        /* =========================================================
+           IMAGE VIEWER
+        ========================================================= */
+        .image-viewer {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            padding: 28px;
+            background: rgba(18, 31, 26, 0.94);
+        }
+
+        .image-viewer.is-open {
+            display: flex;
+        }
+
+        .viewer-content {
+            width: min(1050px, 100%);
+            max-height: 92vh;
+            overflow: auto;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .viewer-content img {
+            display: block;
+            max-width: 100%;
+            max-height: 72vh;
+            margin: 0 auto;
+            object-fit: contain;
+        }
+
+        .viewer-content h2 {
+            margin-top: 18px;
+            font-size: 1.9rem;
+        }
+
+        .viewer-content p {
+            margin-top: 5px;
+            color: #E5E7E2;
+        }
+
+        .viewer-close {
+            position: absolute;
+            top: 15px;
+            right: 22px;
+            width: 48px;
+            height: 48px;
+            border: 1px solid rgba(255,255,255,0.55);
+            border-radius: 50%;
+            background: transparent;
+            color: var(--white);
+            font-size: 2rem;
+            line-height: 1;
+            cursor: pointer;
+        }
+
+        /* =========================================================
+           SMALL SHOP
+           EDIT: Change product names, descriptions, and photos.
+           Current buttons create an email inquiry, not a payment.
+        ========================================================= */
+        .shop-section {
+            width: min(1160px, 92%);
+            margin: 0 auto;
+            padding: 78px 0 86px;
+        }
+
+        .shop-header {
+            margin-bottom: 34px;
+            text-align: center;
+        }
+
+        .shop-grid {
+            display: grid;
+            /* Four products displayed in a balanced two-by-two layout. */
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 24px;
+        }
+
+        .shop-card {
+            display: flex;
+            flex-direction: column;
+            padding: 16px 16px 20px;
+            background: var(--paper);
+            border: 1px solid var(--line);
+            box-shadow: var(--shadow);
+        }
+
+        .shop-image {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            overflow: hidden;
+            background: #E2DED4;
+        }
+
+        .shop-image img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .shop-card h3 {
+            margin-top: 16px;
+            color: var(--evergreen);
+            font-size: 1.45rem;
+            line-height: 1.25;
+        }
+
+        .shop-card p {
+            flex: 1;
+            margin-top: 8px;
+            color: var(--muted);
+            font-size: 0.93rem;
+        }
+
+        .shop-action {
+            display: inline-block;
+            align-self: flex-start;
+            margin-top: 18px;
+            padding: 10px 18px;
+            border: 1px solid var(--evergreen);
+            background: var(--evergreen);
+            color: var(--white);
+            font-size: 0.83rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 180ms ease, color 180ms ease;
+        }
+
+        .shop-action:hover {
+            background: transparent;
+            color: var(--evergreen);
+        }
+
+        /* =========================================================
+           CONTACT FORM
+           EDIT: The recipient address is set in CONTACT_EMAIL below.
+           This static-site form opens the visitor's email program.
+        ========================================================= */
+        .contact-section {
+            padding: 78px 4% 84px;
+            background: var(--evergreen);
+            color: var(--white);
+        }
+
+        .contact-inner {
+            width: min(760px, 100%);
+            margin: 0 auto;
+        }
+
+        .contact-heading {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .contact-heading .eyebrow {
+            color: #E2C08D;
+        }
+
+        .contact-heading h2 {
+            margin-top: 10px;
+            color: var(--white);
+            font-size: clamp(2.2rem, 5vw, 3.4rem);
+            line-height: 1.1;
+        }
+
+        .contact-heading p {
+            max-width: 600px;
+            margin: 14px auto 0;
+            color: #E0E6E1;
+        }
+
+        .contact-form {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+            padding: 28px;
+            background: var(--paper);
+            color: var(--ink);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.14);
+        }
+
+        .form-field {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+        }
+
+        .form-field.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .form-field label {
+            color: var(--evergreen);
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+
+        .form-field input,
+        .form-field textarea {
+            width: 100%;
+            min-height: 50px;
+            padding: 12px 14px;
+            border: 1px solid #CFC8BA;
+            border-radius: 0;
+            background: #FFFFFF;
+            color: var(--ink);
+            font-size: 1rem;
+        }
+
+        .form-field textarea {
+            min-height: 170px;
+            resize: vertical;
+        }
+
+        .form-submit {
+            grid-column: 1 / -1;
+            justify-self: center;
+            min-width: 190px;
+            margin-top: 4px;
+            padding: 13px 24px;
+            border: 1px solid var(--gold);
+            background: var(--gold);
+            color: #FFFFFF;
+            font-size: 0.9rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 180ms ease, color 180ms ease;
+        }
+
+        .form-submit:hover {
+            background: var(--evergreen);
+            color: var(--white);
+        }
+
+        .form-note {
+            margin-top: 16px;
+            color: #E0E6E1;
+            font-size: 0.84rem;
+            text-align: center;
+        }
+
+        .direct-email {
+            margin-top: 12px;
+            color: #F0D7B0;
+            text-align: center;
+            overflow-wrap: anywhere;
+        }
+
+        .direct-email a {
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        /* =========================================================
+           FOOTER
+           EDIT: Replace the copyright name and year as needed.
+        ========================================================= */
+        .site-footer {
+            padding: 22px 16px;
+            background: #1D302A;
+            color: #D5DDD7;
+            font-size: 0.82rem;
+            text-align: center;
+        }
+
+        /* =========================================================
+           TABLET AND MOBILE LAYOUT
+        ========================================================= */
+        @media (max-width: 800px) {
+            .header-inner {
+                padding: 18px 0;
+                flex-direction: column;
+                justify-content: center;
+                gap: 12px;
+            }
+
+            .main-nav {
+                justify-content: center;
+                gap: 20px;
+            }
+
+            .intro-panels {
+                gap: 16px;
+            }
+
+            .intro-panel {
+                padding: 22px;
+            }
+
+            .shop-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 620px) {
+            body {
+                font-size: 16px;
+            }
+
+            .home-intro {
+                padding: 48px 0;
+            }
+
+            .home-intro-heading {
+                margin-bottom: 24px;
+            }
+
+            .intro-panels,
+            .gallery-grid,
+            .shop-grid,
+            .contact-form {
+                grid-template-columns: 1fr;
+            }
+
+            .intro-panel {
+                min-height: 0;
+            }
+
+            .gallery-section,
+            .shop-section,
+            .contact-section {
+                padding-top: 55px;
+                padding-bottom: 58px;
+            }
+
+            .gallery-grid {
+                gap: 28px;
+            }
+
+            .gallery-card h3 {
+                font-size: 1.35rem;
+            }
+
+            .shop-grid {
+                gap: 18px;
+            }
+
+            .contact-form {
+                padding: 20px;
+            }
+
+            .form-field.full-width,
+            .form-submit {
+                grid-column: auto;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *, *::before, *::after {
+                transition-duration: 0.01ms !important;
+                animation-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- =========================================================
+         EDITABLE AREA: SITE NAME / HEADER
+         Change "Grace & Light Studio" to the artist or studio name.
+    ========================================================= -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="#home" aria-label="Grace and Light Studio home">
+                <span class="brand-mark" aria-hidden="true">✦</span>
+                <span class="brand-name">Grace &amp; Light Studio</span>
+            </a>
+
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="#home">Home</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#shop">Shop</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- =====================================================
+             EDITABLE AREA: HOME INTRODUCTION
+             The background image is set in the .home-intro CSS rule.
+             Replace images/home-background.jpg with your own image.
+             Edit the headline, welcome text, mission, and About text.
+        ====================================================== -->
+        <section class="home-intro" id="home">
+            <div class="home-intro-heading">
+                <div class="eyebrow">Art inspired by faith</div>
+                <h1>Beauty, hope, and faith expressed through art.</h1>
+                <p>Thoughtful artwork created to bring encouragement into the home and celebrate the love of God.</p>
+            </div>
+
+            <div class="intro-panels">
+                <!-- EDITABLE AREA: MISSION STATEMENT -->
+                <article class="intro-panel">
+                    <div class="eyebrow">Our Mission</div>
+                    <h2>A message of hope</h2>
+                    <p>My mission is to share the love of God through art, creating meaningful pieces that encourage faith, bring joy, and remind families of the hope found in Christ.</p>
+                </article>
+
+                <!-- EDITABLE AREA: ABOUT THE ARTIST -->
+                <article class="intro-panel">
+                    <div class="eyebrow">About the Artist</div>
+                    <h2>A little about me</h2>
+                    <p>Welcome. I am an artist who believes creativity can be a beautiful way to express faith. Each piece is made with care and a desire to create something meaningful for your home and family.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             EDITABLE AREA: GALLERY
+             Six total entries: one video followed by five images.
+             Replace the sample file paths, titles, dates, and alt text.
+             Desktop layout is two columns by three rows.
+        ====================================================== -->
+        <section class="gallery-section" id="gallery">
+            <div class="gallery-header">
+                <div class="eyebrow">The Collection</div>
+                <h2 class="section-heading">Featured Artwork</h2>
+                <p class="section-intro">A selection of pieces created to reflect faith, family, and the beauty of God's love.</p>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- GALLERY ENTRY 1: VIDEO (same 4:3 frame as image thumbnails) -->
+                <article class="gallery-card">
+                    <div class="gallery-media">
+                        <video
+                            controls
+                            playsinline
+                            preload="metadata"
+                            poster="images/gallery-video-poster.jpg"
+                            aria-label="Video introduction to the artwork collection">
+                            <source src="videos/artist-video.mp4" type="video/mp4">
+                            Your browser does not support HTML video. Please use a current browser to view this film.
+                        </video>
+                    </div>
+                    <h3>Welcome to the Studio</h3>
+                    <p class="gallery-date">November 2026</p>
+                </article>
+
+                <!-- GALLERY ENTRY 2: IMAGE -->
+                <article class="gallery-card">
+                    <div class="gallery-media">
+                        <button class="image-open" type="button"
+                            data-image="images/artwork-1.jpg"
+                            data-title="A Quiet Place of Peace"
+                            data-date="October 2026"
+                            aria-label="Enlarge A Quiet Place of Peace">
+                            <img src="images/artwork-1.jpg" alt="A Quiet Place of Peace artwork" loading="lazy">
+                        </button>
+                    </div>
+                    <h3>A Quiet Place of Peace</h3>
+                    <p class="gallery-date">October 2026</p>
+                </article>
+
+                <!-- GALLERY ENTRY 3: IMAGE -->
+                <article class="gallery-card">
+                    <div class="gallery-media">
+                        <button class="image-open" type="button"
+                            data-image="images/artwork-2.jpg"
+                            data-title="Light for the Journey"
+                            data-date="September 2026"
+                            aria-label="Enlarge Light for the Journey">
+                            <img src="images/artwork-2.jpg" alt="Light for the Journey artwork" loading="lazy">
+                        </button>
+                    </div>
+                    <h3>Light for the Journey</h3>
+                    <p class="gallery-date">September 2026</p>
+                </article>
+
+                <!-- GALLERY ENTRY 4: IMAGE -->
+                <article class="gallery-card">
+                    <div class="gallery-media">
+                        <button class="image-open" type="button"
+                            data-image="images/artwork-3.jpg"
+                            data-title="A Home Filled with Grace"
+                            data-date="August 2026"
+                            aria-label="Enlarge A Home Filled with Grace">
+                            <img src="images/artwork-3.jpg" alt="A Home Filled with Grace artwork" loading="lazy">
+                        </button>
+                    </div>
+                    <h3>A Home Filled with Grace</h3>
+                    <p class="gallery-date">August 2026</p>
+                </article>
+
+                <!-- GALLERY ENTRY 5: IMAGE -->
+                <article class="gallery-card">
+                    <div class="gallery-media">
+                        <button class="image-open" type="button"
+                            data-image="images/artwork-4.jpg"
+                            data-title="The Promise of Morning"
+                            data-date="July 2026"
+                            aria-label="Enlarge The Promise of Morning">
+                            <img src="images/artwork-4.jpg" alt="The Promise of Morning artwork" loading="lazy">
+                        </button>
+                    </div>
+                    <h3>The Promise of Morning</h3>
+                    <p class="gallery-date">July 2026</p>
+                </article>
+
+                <!-- GALLERY ENTRY 6: IMAGE -->
+                <article class="gallery-card">
+                    <div class="gallery-media">
+                        <button class="image-open" type="button"
+                            data-image="images/artwork-5.jpg"
+                            data-title="Held in His Care"
+                            data-date="June 2026"
+                            aria-label="Enlarge Held in His Care">
+                            <img src="images/artwork-5.jpg" alt="Held in His Care artwork" loading="lazy">
+                        </button>
+                    </div>
+                    <h3>Held in His Care</h3>
+                    <p class="gallery-date">June 2026</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Image viewer used by the five artwork image cards -->
+        <div class="image-viewer" id="imageViewer" role="dialog" aria-modal="true" aria-labelledby="viewerTitle" aria-hidden="true">
+            <button class="viewer-close" id="viewerClose" type="button" aria-label="Close enlarged image">&times;</button>
+            <div class="viewer-content">
+                <img id="viewerImage" src="" alt="">
+                <h2 id="viewerTitle"></h2>
+                <p id="viewerDate"></p>
+            </div>
+        </div>
+
+        <!-- =====================================================
+             EDITABLE AREA: SMALL SHOP
+             Replace product names, descriptions, pictures, and labels.
+             Buttons send a product inquiry by email (no payment checkout).
+        ====================================================== -->
+        <section class="shop-section" id="shop">
+            <div class="shop-header">
+                <div class="eyebrow">A Few Special Things</div>
+                <h2 class="section-heading">The Little Shop</h2>
+                <p class="section-intro">Thoughtful gifts and keepsakes to share encouragement with the people you love.</p>
+            </div>
+
+            <div class="shop-grid">
+                <!-- SHOP ITEM 1 -->
+                <article class="shop-card">
+                    <div class="shop-image">
+                        <img src="images/shop-item-1.jpg" alt="Original faith-inspired artwork" loading="lazy">
+                    </div>
+                    <h3>Original Artwork</h3>
+                    <p>A one-of-a-kind piece created with care. Contact me for availability and details.</p>
+                    <button class="shop-action" type="button" data-product="Original Artwork">Ask about this piece</button>
+                </article>
+
+                <!-- SHOP ITEM 2 -->
+                <article class="shop-card">
+                    <div class="shop-image">
+                        <img src="images/shop-item-2.jpg" alt="Fine art print" loading="lazy">
+                    </div>
+                    <h3>Fine Art Print</h3>
+                    <p>A beautiful printed reproduction for a favorite room, prayer space, or family home.</p>
+                    <button class="shop-action" type="button" data-product="Fine Art Print">Ask about this print</button>
+                </article>
+
+                <!-- SHOP ITEM 3 -->
+                <article class="shop-card">
+                    <div class="shop-image">
+                        <img src="images/shop-item-3.jpg" alt="Set of greeting cards" loading="lazy">
+                    </div>
+                    <h3>Greeting Card Set</h3>
+                    <p>Share a thoughtful note of encouragement with friends, family, and loved ones.</p>
+                    <button class="shop-action" type="button" data-product="Greeting Card Set">Ask about this set</button>
+                </article>
+
+
+                <!-- SHOP ITEM 4: EDIT THE PHOTO, TITLE, DESCRIPTION, AND PRODUCT NAME -->
+                <article class="shop-card">
+                    <div class="shop-image">
+                        <img src="images/shop-item-4.jpg" alt="Faith-inspired scripture bookmark set" loading="lazy">
+                    </div>
+                    <h3>Scripture Bookmark Set</h3>
+                    <p>A thoughtful little keepsake to accompany daily reading, prayer, or a gift for someone special.</p>
+                    <button class="shop-action" type="button" data-product="Scripture Bookmark Set">Ask about this set</button>
+                </article>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             EDITABLE AREA: CONTACT SECTION
+             Visitor fills in name, email, and a detailed message.
+             Set CONTACT_EMAIL in the script below to your real address.
+        ====================================================== -->
+        <section class="contact-section" id="contact">
+            <div class="contact-inner">
+                <div class="contact-heading">
+                    <div class="eyebrow">I'd Love to Hear from You</div>
+                    <h2>Let's get in touch.</h2>
+                    <p>Have a question about a piece, a shop item, or a special request? Send me a message and tell me a little about what you have in mind.</p>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-field">
+                        <label for="visitorName">Your name</label>
+                        <input id="visitorName" name="name" type="text" autocomplete="name" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="visitorEmail">Your email address</label>
+                        <input id="visitorEmail" name="email" type="email" autocomplete="email" required>
+                    </div>
+
+                    <div class="form-field full-width">
+                        <label for="visitorMessage">How can I help? Please include any details about your request.</label>
+                        <textarea id="visitorMessage" name="message" rows="7" required></textarea>
+                    </div>
+
+                    <button class="form-submit" type="submit">Prepare Message</button>
+                </form>
+
+                <p class="form-note" id="formNote">Your email program will open with your message ready to review and send.</p>
+                <p class="direct-email">Prefer to write directly? <a id="directEmailLink" href="mailto:your-email@example.com">your-email@example.com</a></p>
+            </div>
+        </section>
+    </main>
+
+    <!-- EDITABLE AREA: FOOTER TEXT -->
+    <footer class="site-footer">
+        &copy; 2026 Your Name. All rights reserved.
+    </footer>
+
+    <script>
+        /* =========================================================
+           EDITABLE AREA: YOUR CONTACT EMAIL
+           Replace this placeholder with the email address where
+           you want customer messages and shop inquiries delivered.
+        ========================================================= */
+        const CONTACT_EMAIL = "your-email@example.com";
+
+        // Keep the visible email link in sync with CONTACT_EMAIL.
+        const directEmailLink = document.getElementById("directEmailLink");
+        directEmailLink.href = `mailto:${CONTACT_EMAIL}`;
+        directEmailLink.textContent = CONTACT_EMAIL;
+
+        /* =========================================================
+           IMAGE VIEWER
+           Clicking an artwork image opens a larger view.
+        ========================================================= */
+        const imageViewer = document.getElementById("imageViewer");
+        const viewerImage = document.getElementById("viewerImage");
+        const viewerTitle = document.getElementById("viewerTitle");
+        const viewerDate = document.getElementById("viewerDate");
+        const viewerClose = document.getElementById("viewerClose");
+        let previouslyFocusedElement = null;
+
+        function openImageViewer(button) {
+            previouslyFocusedElement = document.activeElement;
+            viewerImage.src = button.dataset.image;
+            viewerImage.alt = button.querySelector("img").alt;
+            viewerTitle.textContent = button.dataset.title;
+            viewerDate.textContent = button.dataset.date;
+            imageViewer.classList.add("is-open");
+            imageViewer.setAttribute("aria-hidden", "false");
+            document.body.style.overflow = "hidden";
+            viewerClose.focus();
+        }
+
+        function closeImageViewer() {
+            imageViewer.classList.remove("is-open");
+            imageViewer.setAttribute("aria-hidden", "true");
+            viewerImage.src = "";
+            document.body.style.overflow = "";
+            if (previouslyFocusedElement) previouslyFocusedElement.focus();
+        }
+
+        document.querySelectorAll(".image-open").forEach((button) => {
+            button.addEventListener("click", () => openImageViewer(button));
+        });
+
+        viewerClose.addEventListener("click", closeImageViewer);
+        imageViewer.addEventListener("click", (event) => {
+            if (event.target === imageViewer) closeImageViewer();
+        });
+
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape" && imageViewer.classList.contains("is-open")) {
+                closeImageViewer();
+            }
+        });
+
+        /* =========================================================
+           CONTACT FORM
+           This creates an email draft; it does not send automatically.
+           For direct website submissions, connect a form service or
+           server endpoint instead of using mailto.
+        ========================================================= */
+        document.getElementById("contactForm").addEventListener("submit", (event) => {
+            event.preventDefault();
+
+            const name = document.getElementById("visitorName").value.trim();
+            const visitorEmail = document.getElementById("visitorEmail").value.trim();
+            const message = document.getElementById("visitorMessage").value.trim();
+
+            if (!name || !visitorEmail || !message) return;
+
+            const subject = `Website inquiry from ${name}`;
+            const body =
+                `Name: ${name}\n` +
+                `Email: ${visitorEmail}\n\n` +
+                `Message:\n${message}`;
+
+            document.getElementById("formNote").textContent =
+                "Your email program should open with your message. Please review it and press Send.";
+
+            window.location.href =
+                `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        });
+
+        /* =========================================================
+           SHOP INQUIRY BUTTONS
+           These open an email draft for the selected product.
+        ========================================================= */
+        document.querySelectorAll(".shop-action").forEach((button) => {
+            button.addEventListener("click", () => {
+                const product = button.dataset.product;
+                const subject = `Shop inquiry: ${product}`;
+                const body = `Hello, I'm interested in: ${product}.\n\nPlease send me more information.\n\nThank you!`;
+                window.location.href =
+                    `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            });
+        });
+    </script>
+</body>
+</html>
